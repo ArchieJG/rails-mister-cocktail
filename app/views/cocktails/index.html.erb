@@ -1,0 +1,22 @@
+<div class="container">
+  <div class="row">
+    <% @cocktails.each do |cocktail| %>
+    <div class="col-xs-12 col-sm-4">
+
+      <div class="card" style="background-color: #ccc; padding: 15px; margin: 10px; border-radius: 10px; height: 150px; overflow: auto; text-overflow: ellipsis;">
+        <div class="card-category">
+          <%= link_to cocktail_path(cocktail), method: :delete do %>
+          <i class="fa fa-trash"></i>
+          <% end %>
+        </div>
+        <div class="card-description">
+          <h2>
+            <%= link_to cocktail.name, cocktail_path(cocktail) %>
+            </h2>
+        </div>
+      </div>
+
+    </div>
+    <% end %>
+  </div>
+</div>
