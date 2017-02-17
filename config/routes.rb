@@ -7,8 +7,8 @@ Rails.application.routes.draw do
   root to: 'cocktails#index'
 
   # - As a user, I want to see details of a given cocktail
-  resources :cocktails, only: [ :show, :new, :create, :destroy ] do
-    resources :doses, only: :create
+  resources :cocktails, only: [ :show, :new, :create, :destroy, :index ] do
+    resources :doses, only: [ :create, :new ]
   end
 
   # /doses/3
