@@ -6,7 +6,7 @@
       <% if cocktail.photo? %>
         <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= cl_image_path cocktail.photo.path, height: 300, crop: :fill %>'); padding: 15px; margin: 10px; border-radius: 10px; height: 150px; overflow: auto; text-overflow: ellipsis;">
       <% else %>
-        <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= cl_image_path 'http://res.cloudinary.com/archie-cloud/image/upload/v1487335055/kdk0bnnr0lfoytituorv.jpg', height: 150, crop: :fill %>'); padding: 15px; margin: 10px; border-radius: 10px; height: 150px; overflow: auto; text-overflow: ellipsis;">
+        <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('http://lorempixel.com/400/150/nightlife/<%= rand(10) + 1 %>'); padding: 15px; margin: 10px; border-radius: 10px; height: 150px; overflow: auto; text-overflow: ellipsis;">
       <% end %>
 
         <div class="card-category">
