@@ -3,7 +3,12 @@
     <% @cocktails.each do |cocktail| %>
     <div class="col-xs-12 col-sm-4">
 
-      <div class="card" style="background-color: #ccc; padding: 15px; margin: 10px; border-radius: 10px; height: 150px; overflow: auto; text-overflow: ellipsis;">
+      <% if cocktail.photo? %>
+        <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= cl_image_path cocktail.photo.path, height: 300, crop: :fill %>'); padding: 15px; margin: 10px; border-radius: 10px; height: 150px; overflow: auto; text-overflow: ellipsis;">
+      <% else %>
+        <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= cl_image_path 'http://res.cloudinary.com/archie-cloud/image/upload/v1487335055/kdk0bnnr0lfoytituorv.jpg', height: 150, crop: :fill %>'); padding: 15px; margin: 10px; border-radius: 10px; height: 150px; overflow: auto; text-overflow: ellipsis;">
+      <% end %>
+
         <div class="card-category">
           <%= link_to cocktail_path(cocktail), method: :delete do %>
           <i class="fa fa-trash"></i>
@@ -12,7 +17,7 @@
         <div class="card-description">
           <h2>
             <%= link_to cocktail.name, cocktail_path(cocktail) %>
-            </h2>
+          </h2>
         </div>
       </div>
 
@@ -20,3 +25,6 @@
     <% end %>
   </div>
 </div>
+
+
+

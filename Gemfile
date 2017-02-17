@@ -10,6 +10,11 @@ gem 'font-awesome-sass', '~> 4.7.0'
 gem 'bootstrap-sass', '3.2.0.2'
 gem 'figaro'
 gem 'cloudinary', '1.1.0'
+gem 'carrierwave', '~> 0.11.2'
+
+gem "cloudinary", "1.1.0"
+gem "attachinary", github: "assembler/attachinary"
+gem "jquery-fileupload-rails"
 
 ruby '2.3.3'
 gem 'simple_form', '~> 3.2', '>= 3.2.1'
