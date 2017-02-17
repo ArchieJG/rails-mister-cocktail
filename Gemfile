@@ -9,6 +9,7 @@ gem "font-awesome-rails"
 gem 'font-awesome-sass', '~> 4.7.0'
 gem 'bootstrap-sass', '3.2.0.2'
 gem 'figaro'
+gem 'cloudinary', '1.1.0'
 
 ruby '2.3.3'
 gem 'simple_form', '~> 3.2', '>= 3.2.1'
